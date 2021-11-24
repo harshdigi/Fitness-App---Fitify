@@ -1,0 +1,17 @@
+<!--
+  ~ Creator: Harsh Ahuja on 18/06/21, 9:43 AM Last modified: 11/05/21, 5:39 PM Copyright: All rights reserved Ⓒ 2021 http://digitaldealsolution.in
+  ~
+  -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval" >
+
+    <stroke
+        android:width="2dp"
+        android:color="@color/app_main"
+        />
+    <size
+        android:height="20dp"
+        android:width="20dp"/>
+
+</shape>

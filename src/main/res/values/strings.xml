@@ -1,0 +1,12 @@
+<!--
+  ~ Creator: Harsh Ahuja on 18/06/21, 9:43 AM Last modified: 31/05/21, 11:25 AM Copyright: All rights reserved Ⓒ 2021 http://digitaldealsolution.in
+  ~
+  -->
+
+<resources>
+    <string name="app_name">Fitify</string>
+    <string name="website_url">https://fitifydigi.herokuapp.com</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

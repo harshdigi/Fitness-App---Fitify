@@ -1,0 +1,14 @@
+<!--
+  ~ Creator: Harsh Ahuja on 18/06/21, 9:43 AM Last modified: 11/05/21, 5:43 PM Copyright: All rights reserved Ⓒ 2021 http://digitaldealsolution.in
+  ~
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="180dp"
+    android:height="180dp"
+    android:viewportWidth="180"
+    android:viewportHeight="180">
+  <path
+      android:pathData="M87.5,87.5m-87.5,0a87.5,87.5 0,1 1,175 0a87.5,87.5 0,1 1,-175 0"
+      android:fillColor="@color/app_main"/>
+</vector>

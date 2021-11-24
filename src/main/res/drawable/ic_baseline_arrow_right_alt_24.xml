@@ -1,0 +1,10 @@
+<!--
+  ~ Creator: Harsh Ahuja on 18/06/21, 9:43 AM Last modified: 21/05/21, 5:53 PM Copyright: All rights reserved Ⓒ 2021 http://digitaldealsolution.in
+  ~
+  -->
+
+<vector android:height="24dp" android:tint="#4B4848"
+    android:viewportHeight="24" android:viewportWidth="24"
+    android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@android:color/white" android:pathData="M16.01,11H4v2h12.01v3L20,12l-3.99,-4z"/>
+</vector>

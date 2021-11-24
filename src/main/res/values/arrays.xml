@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Creator: Harsh Ahuja on 18/06/21, 9:43 AM Last modified: 17/06/21, 8:42 PM Copyright: All rights reserved Ⓒ 2021 http://digitaldealsolution.in
+  ~
+  -->
+
+<resources>
+    <string-array name="id_activityScreenTitles">
+        <item></item>
+        <item>Home</item>
+        <item>Exercises</item>
+        <item>Utility</item>
+        <item>Account</item>
+        <item>About Us</item>
+        <item>Share</item>
+        <item>More Apps</item>
+        <item />
+        <item>Log out</item>
+
+    </string-array>
+    <array name="id_activityScreenIcons">
+        <item>@drawable/ic_baseline_close_24</item>
+        <item>@drawable/ic_home</item>
+        <item>@drawable/ic_dumbbell</item>
+        <item>@drawable/ic_calculations</item>
+        <item>@drawable/ic_user</item>
+        <item>@drawable/ic_home</item>
+        <item>@drawable/ic_home</item>
+        <item>@drawable/ic_home</item>
+        <item>0</item>
+        <item>@drawable/ic_logout</item>
+    </array>
+
+    <string-array name="calories_items">
+        <item>Low Physical Activity</item>
+        <item>Average Physical Activity</item>
+        <item>High Physical Activity</item>
+    </string-array>
+</resources>

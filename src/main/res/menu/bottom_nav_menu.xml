@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Creator: Harsh Ahuja on 18/06/21, 9:43 AM Last modified: 08/06/21, 4:56 PM Copyright: All rights reserved Ⓒ 2021 http://digitaldealsolution.in
+  ~
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/bottom_nav_home"
+        android:icon="@drawable/ic_home"
+        app:cnb_iconColor="@color/purple_500"
+        android:title="Home" />
+    <item
+        android:id="@+id/bottom_nav_exercise"
+        android:icon="@drawable/ic_dumbbell"
+        app:cnb_iconColor="@color/purple_500"
+        android:title="Exercises" />
+
+    <item
+        android:id="@+id/bottom_nav_utility"
+        android:icon="@drawable/ic_calculations"
+        app:cnb_iconColor="@color/purple_500"
+        android:title="Extras" />
+    <item
+        android:id="@+id/bottom_nav_account"
+        android:icon="@drawable/ic_user"
+        app:cnb_iconColor="@color/purple_500"
+        android:title="User" />
+
+</menu>

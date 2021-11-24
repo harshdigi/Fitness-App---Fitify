@@ -1,0 +1,16 @@
+<!--
+  ~ Creator: Harsh Ahuja on 18/06/21, 9:43 AM Last modified: 11/05/21, 10:38 PM Copyright: All rights reserved Ⓒ 2021 http://digitaldealsolution.in
+  ~
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="360dp"
+    android:height="640dp"
+    android:viewportWidth="360"
+    android:viewportHeight="640">
+  <path
+      android:strokeWidth="1"
+      android:pathData="M0,0C29.5,15.5 358.998,150 359.998,295.5C360.798,411.9 120.333,573 0,639V0Z"
+      android:fillColor="#ffff"
+      android:strokeColor="#ffff"/>
+</vector>

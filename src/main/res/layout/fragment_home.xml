@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Creator: Harsh Ahuja on 18/06/21, 9:43 AM Last modified: 16/06/21, 1:38 PM Copyright: All rights reserved Ⓒ 2021 http://digitaldealsolution.in
+  ~
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.HomeFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+     <androidx.constraintlayout.widget.ConstraintLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent">
+
+         <io.armcha.elasticview.ElasticView
+             android:id="@+id/item_card_exercise"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             app:cardCornerRadius="10dp"
+             app:cardElevation="5dp"
+             app:flexibility="7"
+             android:layout_margin="5dp"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="parent"
+             app:layout_constraintVertical_bias="0">
+
+             <com.smarteist.autoimageslider.SliderView
+                 android:id="@+id/imageSlider"
+                 android:layout_width="match_parent"
+                 android:layout_height="300dp"
+                 app:sliderAnimationDuration="600"
+                 app:sliderAutoCycleDirection="back_and_forth"
+                 app:sliderAutoCycleEnabled="true"
+                 app:sliderIndicatorAnimationDuration="600"
+                 app:sliderIndicatorGravity="center_horizontal|bottom"
+                 app:sliderIndicatorMargin="15dp"
+                 app:sliderIndicatorOrientation="horizontal"
+                 app:sliderIndicatorPadding="3dp"
+                 app:sliderIndicatorRadius="2dp"
+                 app:sliderIndicatorSelectedColor="#5A5A5A"
+                 app:sliderIndicatorUnselectedColor="#FFF"
+                 app:sliderScrollTimeInSec="5"
+                 app:sliderStartAutoCycle="true" />
+
+         </io.armcha.elasticview.ElasticView>
+         <androidx.cardview.widget.CardView
+             android:id="@+id/our_favourite_section"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             app:cardCornerRadius="10dp"
+             android:layout_marginTop="20dp"
+             android:layout_marginStart="10dp"
+             android:layout_marginEnd="10dp"
+             app:layout_constraintTop_toBottomOf="@id/item_card_exercise"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintEnd_toEndOf="parent">
+         <RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:background="@color/white">
+
+             <LinearLayout
+                 android:id="@+id/favourite_exercises_background"
+                 android:layout_width="170dp"
+                 android:layout_height="280dp"
+                 android:background="@color/purple_500"
+                 android:orientation="vertical"
+                 android:layout_margin="10dp">
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:textSize="18sp"
+                     android:textColor="@color/white"
+                     android:layout_marginTop="50dp"
+                     android:textAllCaps="true"
+                     android:textStyle="bold"
+                     android:layout_marginStart="10dp"
+                     android:text="Our Favourite"/>
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginStart="10dp"
+                     android:textSize="16sp"
+                     android:layout_marginTop="10dp"
+                     android:text="These are the exercies choosed by our experts"
+                     android:textColor="@color/white"
+
+                     />
+             </LinearLayout>
+
+             <com.facebook.shimmer.ShimmerFrameLayout
+                 android:id="@+id/shimmerLayout_ourfav"
+                 android:layout_width="match_parent"
+                 android:layout_height="280dp"
+                 app:shimmer_repeat_mode="restart"
+                 app:shimmer_shape="radial"
+                 android:layout_margin="10dp"
+                 android:layout_toRightOf="@id/favourite_exercises_background"
+                 >
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                 <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal">
+
+                 <include layout="@layout/shimmer_favourite_exercise_card"></include>
+
+
+                 <include layout="@layout/shimmer_favourite_exercise_card"></include>
+
+                 <include layout="@layout/shimmer_favourite_exercise_card"></include>
+
+                 <include layout="@layout/shimmer_favourite_exercise_card"></include>
+
+                 <include layout="@layout/shimmer_favourite_exercise_card"></include>
+
+                 <include layout="@layout/shimmer_favourite_exercise_card"></include>
+
+             </LinearLayout>
+                </HorizontalScrollView>
+
+             </com.facebook.shimmer.ShimmerFrameLayout>
+             <androidx.recyclerview.widget.RecyclerView
+                 android:id="@+id/fav_exercises_recyclerview"
+                 android:layout_width="match_parent"
+                 android:layout_height="280dp"
+                 android:layout_margin="10dp"
+                 android:layout_toRightOf="@id/favourite_exercises_background"
+
+                 />
+
+         </RelativeLayout>
+         </androidx.cardview.widget.CardView>
+
+         <TextView
+             android:id="@+id/text_category"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@id/our_favourite_section"
+             android:text="Categories"
+             android:textSize="18sp"
+             android:textStyle="bold"
+             android:textColor="?android:textColorPrimary"
+             android:textAllCaps="true"
+             android:layout_margin="20dp"
+             android:textAlignment="center"/>
+
+
+         <LinearLayout
+             android:id="@+id/workout_section"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="vertical"
+             android:padding="20dp"
+             android:layout_marginTop="30dp"
+             app:layout_constraintTop_toBottomOf="@id/text_category"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintEnd_toEndOf="parent">
+             <RelativeLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginBottom="10dp"
+                >
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="Workouts"
+                     android:textSize="16sp"
+                     android:textColor="?android:textColorPrimary"
+                     android:textStyle="bold"
+                     android:textAllCaps="true"
+                     />
+
+                 <TextView
+                     android:id="@+id/workout_viewAll"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="View All"
+                     android:layout_alignParentRight="true"
+                     android:textColor="?android:textColorPrimary"
+                     android:textSize="14sp"
+                     android:layout_centerVertical="true"
+                     android:textStyle="bold"
+                     />
+
+             </RelativeLayout>
+             <androidx.constraintlayout.widget.ConstraintLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent">
+             <com.facebook.shimmer.ShimmerFrameLayout
+                 android:id="@+id/shimmerLayout_workout"
+                 android:layout_width="match_parent"
+                 android:layout_height="280dp"
+                 app:shimmer_repeat_mode="restart"
+                 app:shimmer_shape="radial"
+                 app:layout_constraintTop_toTopOf="parent"
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintEnd_toEndOf="parent">
+                 <HorizontalScrollView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content">
+                     <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:orientation="horizontal">
+                         <include layout="@layout/shimmer_card_workout"></include>
+
+                         <include layout="@layout/shimmer_card_workout"></include>
+
+                         <include layout="@layout/shimmer_card_workout"></include>
+
+                         <include layout="@layout/shimmer_card_workout"></include>
+
+                         <include layout="@layout/shimmer_card_workout"></include>
+
+                         <include layout="@layout/shimmer_card_workout"></include>
+
+                     </LinearLayout>
+                 </HorizontalScrollView>
+
+             </com.facebook.shimmer.ShimmerFrameLayout>
+             <androidx.recyclerview.widget.RecyclerView
+                 android:id="@+id/workout_recycler"
+                 android:layout_width="match_parent"
+                 android:layout_height="280dp"
+                 app:layout_constraintTop_toTopOf="parent"
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 />
+             </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+         </LinearLayout>
+         <LinearLayout
+             android:id="@+id/body_part_section"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="vertical"
+             android:padding="20dp"
+             android:layout_marginTop="10dp"
+             app:layout_constraintTop_toBottomOf="@id/workout_section"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintEnd_toEndOf="parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Body Parts"
+                android:textSize="16sp"
+                android:textColor="?android:textColorPrimary"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                />
+
+        </RelativeLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent">
+             <com.facebook.shimmer.ShimmerFrameLayout
+                 android:id="@+id/shimmerLayout_bodypart"
+                 android:layout_width="match_parent"
+                 android:layout_height="180dp"
+                 app:shimmer_repeat_mode="restart"
+                 app:shimmer_shape="radial"
+                 app:layout_constraintTop_toTopOf="parent"
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 >
+                 <HorizontalScrollView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content">
+                     <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:orientation="horizontal">
+
+                         <include layout="@layout/shimmer_card_bodyandequipment"></include>
+
+                         <include layout="@layout/shimmer_card_bodyandequipment"></include>
+
+                         <include layout="@layout/shimmer_card_bodyandequipment"></include>
+
+                         <include layout="@layout/shimmer_card_bodyandequipment"></include>
+
+                         <include layout="@layout/shimmer_card_bodyandequipment"></include>
+
+                         <include layout="@layout/shimmer_card_bodyandequipment"></include>
+
+                     </LinearLayout>
+                 </HorizontalScrollView>
+
+
+             </com.facebook.shimmer.ShimmerFrameLayout>
+             <androidx.recyclerview.widget.RecyclerView
+                 android:id="@+id/bodypart_recycler"
+                 android:layout_width="match_parent"
+                 android:layout_height="180dp"
+                 android:layout_marginTop="10dp"
+                 app:layout_constraintTop_toTopOf="parent"
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintEnd_toEndOf="parent"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+         </LinearLayout>
+
+
+
+         <LinearLayout
+             android:id="@+id/equiment_section"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="vertical"
+             android:padding="20dp"
+             android:layout_marginTop="30dp"
+             app:layout_constraintTop_toBottomOf="@id/body_part_section"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintEnd_toEndOf="parent">
+             <RelativeLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginBottom="10dp">
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="Equipments"
+                     android:textSize="16sp"
+                     android:textColor="?android:textColorPrimary"
+                     android:textStyle="bold"
+                     android:textAllCaps="true"
+                     />
+
+
+             </RelativeLayout>
+             <androidx.constraintlayout.widget.ConstraintLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent">
+             <com.facebook.shimmer.ShimmerFrameLayout
+                 android:id="@+id/shimmerLayout_equipment"
+                 android:layout_width="match_parent"
+                 android:layout_height="180dp"
+                 app:shimmer_repeat_mode="restart"
+                 app:shimmer_shape="radial"
+                 app:layout_constraintTop_toTopOf="parent"
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintEnd_toEndOf="parent">
+                 <HorizontalScrollView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content">
+                     <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:orientation="horizontal">
+
+                         <include layout="@layout/shimmer_card_bodyandequipment"></include>
+
+                         <include layout="@layout/shimmer_card_bodyandequipment"></include>
+
+                         <include layout="@layout/shimmer_card_bodyandequipment"></include>
+
+                         <include layout="@layout/shimmer_card_bodyandequipment"></include>
+
+                         <include layout="@layout/shimmer_card_bodyandequipment"></include>
+
+                         <include layout="@layout/shimmer_card_bodyandequipment"></include>
+
+                     </LinearLayout>
+                 </HorizontalScrollView>
+
+             </com.facebook.shimmer.ShimmerFrameLayout>
+             <androidx.recyclerview.widget.RecyclerView
+                 android:id="@+id/equipment_recycler"
+                 android:layout_width="match_parent"
+                 android:layout_height="180dp"
+                 app:layout_constraintTop_toTopOf="parent"
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 />
+             </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+         </LinearLayout>
+
+     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

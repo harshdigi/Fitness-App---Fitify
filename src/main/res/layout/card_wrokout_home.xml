@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Creator: Harsh Ahuja on 18/06/21, 9:43 AM Last modified: 17/06/21, 5:45 PM Copyright: All rights reserved Ⓒ 2021 http://digitaldealsolution.in
+  ~
+  -->
+
+<io.armcha.elasticview.ElasticView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/workout_card_parent"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    app:cardCornerRadius="10dp"
+    app:flexibility="7"
+    android:layout_margin="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/card_workout_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/card_workout_image"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</io.armcha.elasticview.ElasticView>
